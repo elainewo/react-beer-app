@@ -141,7 +141,7 @@ nav ul {
   padding: 7%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 40vh 40vh;
+  grid-template-rows: 37vh 40vh;
   grid-row-gap: 1rem;
   word-break: break-word;
 }
@@ -184,6 +184,9 @@ nav ul {
   border-radius: 50%;
   color: #fff;
   font-size: 1.2rem;
+  position: fixed;
+  bottom: 5.2rem;
+  right: 1.3rem;
 }
 
 /* BEER SINGLE CARD */
