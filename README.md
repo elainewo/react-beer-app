@@ -9,7 +9,8 @@ can also show a beer by random or add his own favorite beer to his own collectio
 
 ## Assets:
 * React
-* React Hooks 
+* React Hooks
+* Open source Beer API
 * mockAPI
 
 ## App Demo
