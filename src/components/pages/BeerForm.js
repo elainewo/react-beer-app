@@ -78,7 +78,8 @@ const BeerForm = () => {
                 </fieldset>
             </form>
             <button onClick={handelReset} className={isLoading ? "show center" : "hide"}>Add more Beer</button>
-            {isLoading || isLoading && toggle ? <NewbeerList /> : ""}
+            {isLoading ? <NewbeerList /> : "" || isLoading && toggle ? <NewbeerList /> : ""}
+
             <Nav />
         </section>
     );
