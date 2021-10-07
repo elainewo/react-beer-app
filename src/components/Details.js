@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { ImArrowLeft2 } from "react-icons/im";
+import Nav from './Nav';
 
 class Details extends Component {
     constructor(props) {
@@ -14,16 +16,33 @@ class Details extends Component {
                 this.setState({ isLoading: true });
             }))
     }
+    handleBack = () => {
+        this.props.history.goBack();
+    }
     render() {
-        console.log(this.props);
-        console.log(this.state.beers);
         return (
-            <div>
-                <article key={this.state.isLoading && this.state.beers._id}>
+            <>
+                <article key={this.state.isLoading && this.state.beers._id} className="beer-card">
                     <img src={this.state.isLoading && this.state.beers.image_url} alt="" />
+                    <div>
+                        <h2>{this.state.isLoading && this.state.beers.name}</h2>
+                        <h3>{this.state.isLoading && this.state.beers.tagline}</h3>
+                        <div>
+                            <div>
+                                <p>First brewed:</p>
+                                <p>{this.state.isLoading && this.state.beers.first_brewed}</p>
+                            </div>
+                            <div>
+                                <p>Attenuation level:</p>
+                                <p>{this.state.isLoading && this.state.beers.attenuation_level}</p>
+                            </div>
+                        </div>
+                        <p>{this.state.isLoading && this.state.beers.description}</p>
+                        <ImArrowLeft2 onClick={this.handleBack} className="arrow-back" />
+                    </div>
                 </article>
-            </div>
-
+                <Nav />
+            </>
         );
     }
 }
