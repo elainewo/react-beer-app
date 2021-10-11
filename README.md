@@ -14,5 +14,5 @@ can also show a beer by random or add his own favorite beer to his own collectio
 * mockAPI
 
 ## App Demo
-[Beer Showcase](https://facebook.github.io/create-react-app/docs/getting-started).
+Link to [Beer Showcase](https://beer-showcase.netlify.app)
 
